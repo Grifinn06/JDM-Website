@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta charset="utf-8">
+<title>JDM CARS</title>
+    <link rel="stylesheet" href="styl.css" />
+	<!--favicon-->
+	<link rel="shortcut icon" href="icon.jpg"/>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo">JDM+</a>
+		<div class="righSide">
+			<div class="btns dayNight">
+				<ion-icon name="moon-outline"></ion-icon>
+				<ion-icon name="sunny-outline"></ion-icon>
+			</div>
+			<div class="btns menuToggle">
+				<ion-icon name="car-sport-outline"></ion-icon>
+				<ion-icon name="car-outline"></ion-icon>
+			</div>
+		</div>
+    </header>
+	<ul class="navigation">
+		<li><a href="index.html">Ana Sayfa</a></li>
+		<li><a href="index4.html">Hakkında</a></li>
+		<li><a href="index2.html">Galeri</a></li>
+		<li><a href="index3.html">Video</a></li>
+	</ul>
+    <section class="ftco-section img bg-hero" style="background-image: url(jdmimg/pht.jpg);">
+		<div class="container">
+			<div class="row justify-content-center">
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-11">
+					<div class="wrapper">
+						<div class="row no-gutters justify-content-between">
+							<div class="col-lg-6 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5">
+									<h3 class="mb-4">İletişim</h3>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-4">
+					            <p><span>Adres:</span> Afyon </p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-4">
+					            <p><span>Telefon:</span> <a href="tel://1234567920">+90 531 313 1313</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-4">
+					            <p><span>Mail Adresi:</span> <a href="mailto:jdm@jdm+.com">jdm@jdm+.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-4">
+					            <p><span>İnternet Adresi</span> <a href="https://www.jdm+.com">jdm+.com</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-lg-5">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">İletişime Geç</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Mesajın Gönderildi , Teşekkürler
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="isim" id="name" placeholder="isim">
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="Konu" id="subject" placeholder="Konu">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="Mesaj" class="form-control" id="message" cols="30" rows="5" placeholder="Mesaj"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Mesajı Gönder" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script>
+		let dayNight = document.querySelector('.dayNight')
+		let menuToggle = document.querySelector('.menuToggle')
+		let body = document.querySelector('body')
+		let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function(){
+			body.classList.toggle('dark')
+			dayNight.classList.toggle('active')
+		}
+		menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		}
+	</script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

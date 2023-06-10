@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta charset="utf-8">
+<title>JDM CARS</title>
+	<link rel="stylesheet" href="style.css" />
+		<!--favicon-->
+		<link rel="shortcut icon" href="icon.jpg"/>
+</head>
+<body>
+	<header>
+		<a href="index.html" class="logo">JDM+</a>
+			<div class="righSide">
+				<div class="btns dayNight">
+					<ion-icon name="moon-outline"></ion-icon>
+					<ion-icon name="sunny-outline"></ion-icon>
+				</div>
+				<div class="btns menuToggle">
+					<ion-icon name="car-sport-outline"></ion-icon>
+					<ion-icon name="car-outline"></ion-icon>
+				</div>
+			</div>
+	</header>
+    <!--sidebar navigation-->
+	<ul class="navigation">
+		<li><a href="index.html">Ana Sayfa</a></li>
+		<li><a href="index4.html">Hakkında</a></li>
+		<li><a href="index2.html">Galeri</a></li>
+		<li><a href="index3.html">Video</a></li>
+	</ul>
+	<!--galeri-->
+	<div class="container">
+		<div class="box">
+			<video src="jdmvideo/Epic JDM Edit 2.mp4" type=video/mp4 controls="controls" loop class="clip" muted></video>
+		</div>
+		<div class="box">
+			<video src="jdmvideo/Epic JDM Edit 4.mp4" type=video/mp4 controls="controls" loop class="clip" muted></video>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="box2">
+			<video src="jdmvideo/jdmvid.mp4" type=video/mp4 controls="controls" loop class="clip" muted></video>
+		</div>
+		<div class="box2">
+			<video src="jdmvideo/video1.mp4" type=video/mp4 controls="controls" loop class="clip" muted></video>
+		</div>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script>
+		let dayNight = document.querySelector('.dayNight')
+		let menuToggle = document.querySelector('.menuToggle')
+		let body = document.querySelector('body')
+		let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function(){
+			body.classList.toggle('dark')
+			dayNight.classList.toggle('active')
+		}
+		menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		}
+	</script>
+	<!--vidsc-->
+	    <script>
+			const clip = document.querySelectorAll('.clip');
+			for (let i = 0; i<clip.length; i++){
+				clip[i].addEventListener('mouseenter',
+				function(e){
+				  clip[i].play()
+				})
+				clip[i].addEventListener('mouseout',
+				function(e){
+				  clip[i].pause()
+				})
+				}
+		</script>
+</body>
+</html>
